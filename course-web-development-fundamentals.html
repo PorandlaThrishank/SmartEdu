@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web Development Fundamentals - SmartEdu</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="html course, css course, javascript course, web development beginner" name="keywords">
+    <meta content="Learn web development fundamentals with HTML, CSS and JavaScript in this comprehensive beginner course." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .course-header {
+            background: linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)), url(img/course-bg.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(13, 110, 253, 0.1);
+            color: #0d6efd;
+        }
+        .instructor-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="text-primary"><i class="fa fa-book me-2"></i>SmartEdu</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="courses.html" class="nav-link">Courses</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="join.html" class="btn btn-primary ms-3">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Header -->
+    <div class="container-fluid course-header py-5 mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 text-white mb-3">Web Development Fundamentals</h1>
+                    <p class="fs-5 text-white mb-4">Master the core technologies of the web: HTML, CSS and JavaScript</p>
+                    <div class="d-flex align-items-center">
+                        <div class="ratings me-4">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star-half-alt text-warning"></i>
+                            <span class="text-white ms-1">4.5 (1,245 ratings)</span>
+                        </div>
+                        <span class="text-white"><i class="fa fa-user me-1"></i> 1.2k students</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <h2 class="text-white">₹3,499</h2>
+                    <a href="join.html" class="btn btn-light btn-lg mt-3">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Content -->
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <!-- Course Overview -->
+                <div class="card border-0 shadow-sm mb-5">
+                    <div class="card-body">
+                        <h3 class="mb-4">Course Overview</h3>
+                        <p>This comprehensive course will teach you the fundamental tools of web development. You'll learn how to create websites using HTML, style them with CSS, and add interactivity with JavaScript.</p>
+                        <p>By the end of this course, you'll be able to build responsive, modern websites from scratch and deploy them to the web. Perfect for absolute beginners with no prior coding experience.</p>
+                        
+                        <h4 class="mt-5 mb-3">What You'll Learn</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Structure web pages with HTML5</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Style websites with CSS3 including Flexbox and Grid</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Add interactivity with JavaScript (ES6+)</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Build responsive layouts that work on all devices</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Work with developer tools and debug code</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Deploy websites to production using GitHub Pages</li>
+                            <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Understand web accessibility principles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Course Curriculum -->
+                <div class="card border-0 shadow-sm mb-5">
+                    <div class="card-body">
+                        <h3 class="mb-4">Course Curriculum</h3>
+                        
+                        <div class="accordion" id="curriculumAccordion">
+                            <!-- Module 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#module1">
+                                        Module 1: HTML Fundamentals (3 hours)
+                                    </button>
+                                </h2>
+                                <div id="module1" class="accordion-collapse collapse show" data-bs-parent="#curriculumAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> Introduction to HTML and Web Development</li>
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> HTML Document Structure and Semantic Elements</li>
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> Working with Text, Links and Images</li>
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> Lists, Tables and Media Elements</li>
+                                            <li class="py-2"><i class="fa fa-play-circle text-primary me-2"></i> HTML Forms and Input Elements</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Module 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module2">
+                                        Module 2: CSS Styling (5 hours)
+                                    </button>
+                                </h2>
+                                <div id="module2" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> CSS Syntax and Selectors</li>
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> Box Model and Layout Fundamentals</li>
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> Flexbox and CSS Grid Systems</li>
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> Responsive Design and Media Queries</li>
+                                            <li class="py-2"><i class="fa fa-play-circle text-primary me-2"></i> CSS Transitions and Animations</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Module 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module3">
+                                        Module 3: JavaScript Basics (4 hours)
+                                    </button>
+                                </h2>
+                                <div id="module3" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> JavaScript Fundamentals and Syntax</li>
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> DOM Manipulation and Events</li>
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> Working with Forms and Validation</li>
+                                            <li class="py-2"><i class="fa fa-play-circle text-primary me-2"></i> Introduction to ES6+ Features</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Module 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module4">
+                                        Module 4: Final Project (3 hours)
+                                    </button>
+                                </h2>
+                                <div id="module4" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> Building a Complete Portfolio Website</li>
+                                            <li class="py-2 border-bottom"><i class="fa fa-play-circle text-primary me-2"></i> Making it Responsive</li>
+                                            <li class="py-2"><i class="fa fa-play-circle text-primary me-2"></i> Deploying to GitHub Pages</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Requirements -->
+                <div class="card border-0 shadow-sm mb-5">
+                    <div class="card-body">
+                        <h3 class="mb-4">Requirements</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fa fa-check-circle text-primary me-2"></i> No prior programming experience needed</li>
+                            <li class="mb-2"><i class="fa fa-check-circle text-primary me-2"></i> A computer with internet access</li>
+                            <li class="mb-2"><i class="fa fa-check-circle text-primary me-2"></i> Any text editor (we'll use VS Code)</li>
+                            <li class="mb-2"><i class="fa fa-check-circle text-primary me-2"></i> Modern web browser (Chrome, Firefox, Edge)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Instructor -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="mb-4">About the Instructor</h3>
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/instructor-1.jpg" class="rounded-circle me-4 instructor-img" alt="Prof. Rajesh Kumar">
+                            <div>
+                                <h5>Prof. Rajesh Kumar</h5>
+                                <p class="text-muted mb-2">Senior Web Developer with 10+ years experience</p>
+                                <div class="ratings">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star-half-alt text-warning"></i>
+                                    <span class="ms-1">4.6 Instructor Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Prof. Rajesh has been teaching web development for over 5 years and has worked with companies like Infosys and TCS. He specializes in making complex concepts easy to understand for beginners.</p>
+                        <p>His teaching philosophy focuses on hands-on learning with real-world projects that students can add to their portfolios.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm sticky-top" style="top: 20px;">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <img src="img/course-web-fundamentals.jpg" class="img-fluid rounded" alt="Web Development Fundamentals">
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mb-3">
+                            <span><i class="fa fa-clock text-primary me-2"></i> Duration</span>
+                            <span>15 hours</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mb-3">
+                            <span><i class="fa fa-video text-primary me-2"></i> Lectures</span>
+                            <span>45</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mb-3">
+                            <span><i class="fa fa-signal text-primary me-2"></i> Level</span>
+                            <span>Beginner</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mb-3">
+                            <span><i class="fa fa-file-alt text-primary me-2"></i> Resources</span>
+                            <span>12 Downloadable</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mb-4">
+                            <span><i class="fa fa-certificate text-primary me-2"></i> Certificate</span>
+                            <span>Yes</span>
+                        </div>
+                        
+                        <a href="join.html" class="btn btn-primary w-100 py-3 mb-3">Enroll Now</a>
+                        <a href="#" class="btn btn-outline-secondary w-100 py-3">Add to Wishlist</a>
+                        
+                        <hr class="my-4">
+                        
+                        <h5 class="mb-3">Share this course</h5>
+                        <div class="d-flex">
+                            <a href="#" class="btn btn-outline-primary btn-square me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="btn btn-outline-primary btn-square me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-outline-primary btn-square me-2"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="btn btn-outline-primary btn-square"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>SmartEdu</h5>
+                    <p>India's leading online learning platform for skill development and career advancement.</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white">About</a></li>
+                        <li class="mb-2"><a href="courses.html" class="text-white">Courses</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white">Contact</a></li>
+                        <li class="mb-2"><a href="privacy.html" class="text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fa fa-map-marker-alt me-2"></i> Warangal, Telangana, India</p>
+                    <p><i class="fa fa-phone-alt me-2"></i> +91 98765 43210</p>
+                    <p><i class="fa fa-envelope me-2"></i> contact@smartedu.in</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 SmartEdu. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
